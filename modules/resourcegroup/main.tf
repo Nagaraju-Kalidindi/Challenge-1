@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "azure-stack-rs" {
+resource "azurerm_resource_group" "azure-terraform-rs" {
   name     = var.name
   location = var.location
 }
