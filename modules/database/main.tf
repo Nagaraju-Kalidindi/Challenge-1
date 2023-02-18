@@ -10,6 +10,7 @@ resource "azurerm_sql_server" "primary" {
 resource "azurerm_sql_database" "db" {
   name                = "db"
   resource_group_name = var.resource_group
-  location            = var.location
+  charset             = "utf8"
+  collation           = "utf8_unicode_ci"  
   server_name         = azurerm_sql_server.primary.name
 }
