@@ -1,3 +1,7 @@
+variable "client_id" {}
+variable "client_secret" {}
+variable "tenant_id" {}
+variable "subscription_id" {}
 variable "name" {}
 variable "location" {}
 variable "vnetcidr" {}
@@ -14,6 +18,3 @@ variable "primary_database" {}
 variable "primary_database_admin" {}
 variable "primary_database_password" {}
 variable "primary_database_version" {}
-
-
-
