@@ -1,5 +1,5 @@
 output "resource_group_name" {
-    value = azurerm_resource_group.azure-stack-rs.name
+    value = azurerm_resource_group.azure-terraform-rs.name
     description = "Name of the resource group."
 }
 
