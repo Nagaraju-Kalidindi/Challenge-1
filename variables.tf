@@ -18,3 +18,5 @@ variable "primary_database" {}
 variable "primary_database_admin" {}
 variable "primary_database_password" {}
 variable "primary_database_version" {}
+variable "storage_account_name" {}
+variable "container_name" {}
