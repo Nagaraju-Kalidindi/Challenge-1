@@ -5,7 +5,7 @@ resource "azurerm_network_security_group" "web-nsg" {
   
   security_rule {
     name                       = "http-rule"
-    priority                   = 101
+    priority                   = 102
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
@@ -13,6 +13,18 @@ resource "azurerm_network_security_group" "web-nsg" {
     source_port_range          = "*"
     destination_address_prefix = "*"
     destination_port_range     = "80"
+  }
+  
+  security_rule {
+    name                       = "https-rule"
+    priority                   = 103
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_address_prefix      = "*"
+    source_port_range          = "*"
+    destination_address_prefix = "*"
+    destination_port_range     = "443"
   }
   
   security_rule {
@@ -73,6 +85,18 @@ resource "azurerm_network_security_group" "app-nsg" {
         source_port_range = "*"
         destination_address_prefix = "*"
         destination_port_range = "22"
+    }
+  
+  security_rule {
+        name = "ssh-rule-3"
+        priority = 101
+        direction = "Outbound"
+        access = "Allow"
+        protocol = "Tcp"
+        source_address_prefix = "192.168.3.0/24"
+        source_port_range = "*"
+        destination_address_prefix = "*"
+        destination_port_range = "3306"
     }
 }
 
