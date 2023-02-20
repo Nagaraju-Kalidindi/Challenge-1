@@ -23,4 +23,4 @@ To Destroy resources:
 
   terraform destroy
   
-Note: We can store the sensitive data like certificates, credentials on Azure KeyVault and retrrieve them when ever needed by using a data source in terraform script. For this secrets need to be stored on azure key vault already before access via terraform script.  
+Note: We can keep the terraform scripts as it(includes sensitive date) if the template in a dedicated & secure location like under a storage account or on a VM (which have MSI enabled), from there we can execute terraform commands. One more way is We can store the sensitive data like certificates, credentials on Azure KeyVault and retrrieve them when ever needed by using a data source in terraform script. For this secrets need to be stored on azure key vault already before access via terraform script.
