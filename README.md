@@ -1,7 +1,9 @@
 # Challenge-1
 A 3-tier environment is a common setup. Use a tool of your choosing/familiarity create these resources on a cloud environment Azure.
 
-Pre requisite: A service principle should be created with contributor access to the current azure subcirption for terraform to authenticate Azure portal, A Storage account and a container under storage account should be created for Terraform state file to storing. We are using this storage account for our Terraform backend.
+Pre requisite: 
+1. A service principle should be created with contributor access to the current azure subcirption for terraform to authenticate Azure portal. 
+2. A Storage account and a container under storage account should be created for Terraform state file to storing. We are using this storage account for our Terraform backend.  I have included a terraform script for storage account createion.
 
 Architecture design:
 
