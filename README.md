@@ -10,3 +10,13 @@ Architecture design:
 3. Application server shoule allow traffic from web server and reply to it 
 4. Application server can connect to Database server and vice versa but, Database server should not have any direct access to/from Web server VM.
 
+Steps to Test the script:
+
+1. terraform init
+2. terraform validate
+3. terraform plan
+4. terraform apply
+
+To Destroy resources:
+
+terraform destroy
