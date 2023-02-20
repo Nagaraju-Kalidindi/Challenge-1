@@ -21,4 +21,6 @@ Steps to Test the script:
 
 To Destroy resources:
 
-terraform destroy
+  terraform destroy
+  
+Note: We can store the sensitive data like certificates, credentials on Azure KeyVault and retrrieve them when ever needed by using a data source in terraform script. For this secrets need to be stored on azure key vault already.   
