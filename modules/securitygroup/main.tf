@@ -4,6 +4,18 @@ resource "azurerm_network_security_group" "web-nsg" {
   resource_group_name = var.resource_group
   
   security_rule {
+    name                       = "http-rule"
+    priority                   = 101
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_address_prefix      = "*"
+    source_port_range          = "*"
+    destination_address_prefix = "*"
+    destination_port_range     = "80"
+  }
+  
+  security_rule {
     name                       = "ssh-rule-1"
     priority                   = 101
     direction                  = "Inbound"
